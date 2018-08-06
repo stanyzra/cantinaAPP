@@ -29,7 +29,7 @@ public class ProdutosActivity extends AppCompatActivity {
 
     private Button botaoPrecoFinal = (Button) findViewById(R.id.buttonPrecoFinal);
 
-    private TextView mostrarQtde; 
+    private TextView mostrarQtde;
     private TextView mostrarPreco;
 
     private int qtdeSalg = 0;
