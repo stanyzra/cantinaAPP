@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         botaoProd = (Button) findViewById(R.id.buttonProdutos);
         sobreNos = (Button) findViewById(R.id.buttonNos);
 
@@ -25,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(MainActivity.this, ProdutosActivity.class));
-
-
 
             }
         });

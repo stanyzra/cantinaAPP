@@ -9,11 +9,11 @@ import android.widget.TextView;
 
 public class ProdutosActivity extends AppCompatActivity {
 
-    final double precoSalgado = 3.80;
-    final double precoRefri = 1.50;
-    final double precoBalas = 0.10;
-    final double precoPirulito = 0.50;
-    final double precoCapu = 2.0;
+        final double precoSalgado = 3.80;
+        final double precoRefri = 1.50;
+        final double precoBalas = 0.10;
+        final double precoPirulito = 0.50;
+        final double precoCapu = 2.0;
 
     private Button botaoMaisSalgado = (Button) findViewById(R.id.buttonMaisSalgado);
     private Button botaoMaisRefri = (Button) findViewById(R.id.buttonMaisRefri);
