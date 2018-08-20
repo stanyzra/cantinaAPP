@@ -15,20 +15,6 @@ public class ProdutosActivity extends AppCompatActivity {
         final double precoPirulito = 0.50;
         final double precoCapu = 2.0;
 
-    private Button botaoMaisSalgado = (Button) findViewById(R.id.buttonMaisSalgado);
-    private Button botaoMaisRefri = (Button) findViewById(R.id.buttonMaisRefri);
-    private Button botaoMaisBalas = (Button) findViewById(R.id.buttonMaisBalas);
-    private Button botaoMaisPirulito = (Button) findViewById(R.id.buttonMaisPirulito);
-    private Button botaoMaisCapu = (Button) findViewById(R.id.buttonMaisCapu);
-
-    private Button botaoMenosSalgado = (Button) findViewById(R.id.buttonMaisSalgado);
-    private Button botaoMenosRefri = (Button) findViewById(R.id.buttonMaisRefri);
-    private Button botaoMenosBalas = (Button) findViewById(R.id.buttonMaisBalas);
-    private Button botaoMenosPirulito = (Button) findViewById(R.id.buttonMaisPirulito);
-    private Button botaoMenosCapu = (Button) findViewById(R.id.buttonMaisCapu);
-
-    private Button botaoPrecoFinal = (Button) findViewById(R.id.buttonPrecoFinal);
-
     private TextView mostrarQtde;
     private TextView mostrarPreco;
 
@@ -38,11 +24,26 @@ public class ProdutosActivity extends AppCompatActivity {
     private int qtdePirulito = 0;
     private int qtdeCapu = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produtos);
+
+         Button botaoMaisSalgado = (Button) findViewById(R.id.buttonMaisSalgado);
+         Button botaoMaisRefri = (Button) findViewById(R.id.buttonMaisRefri);
+         Button botaoMaisBalas = (Button) findViewById(R.id.buttonMaisBalas);
+         Button botaoMaisPirulito = (Button) findViewById(R.id.buttonMaisPirulito);
+         Button botaoMaisCapu = (Button) findViewById(R.id.buttonMaisCapu);
+
+         Button botaoMenosSalgado = (Button) findViewById(R.id.buttonMenosSalgado);
+         Button botaoMenosRefri = (Button) findViewById(R.id.buttonMenosRefri);
+         Button botaoMenosBalas = (Button) findViewById(R.id.buttonMenosBalas);
+         Button botaoMenosPirulito = (Button) findViewById(R.id.buttonMenosPirulito);
+         Button botaoMenosCapu = (Button) findViewById(R.id.buttonMenosCapu);
+
+         Button botaoPrecoFinal = (Button) findViewById(R.id.buttonPrecoFinal);
+
+
 
         botaoMaisSalgado.setOnClickListener(new View.OnClickListener() {
             @Override
