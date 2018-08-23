@@ -6,17 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.EditText;
+
+import org.w3c.dom.Text;
 
 public class ProdutosActivity extends AppCompatActivity {
 
-        final double precoSalgado = 3.80;
-        final double precoRefri = 1.50;
-        final double precoBalas = 0.10;
-        final double precoPirulito = 0.50;
-        final double precoCapu = 2.0;
+    final double precoSalgado = 3.80;
+    final double precoRefri = 1.50;
+    final double precoBalas = 0.10;
+    final double precoPirulito = 0.50;
+    final double precoCapu = 2.0;
 
     private TextView mostrarQtde;
     private TextView mostrarPreco;
+    private TextView mostrarTroco;
 
     private int qtdeSalg = 0;
     private int qtdeRefri = 0;
@@ -42,6 +46,8 @@ public class ProdutosActivity extends AppCompatActivity {
          Button botaoMenosCapu = (Button) findViewById(R.id.buttonMenosCapu);
 
          Button botaoPrecoFinal = (Button) findViewById(R.id.buttonPrecoFinal);
+
+         final EditText editValorInformado = (EditText) findViewById(R.id.editTextTroco);
 
 
 
@@ -170,11 +176,28 @@ public class ProdutosActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 mostrarPreco = (TextView) findViewById(R.id.precoFinal);
+                mostrarTroco = (TextView) findViewById(R.id.textViewTroco);
 
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText(""+preco);
+                mostrarPreco.setText("Preço final: "+preco);
+
+                String valorInformado = editValorInformado.getText().toString();
+
+                double troco = Double.parseDouble(valorInformado)-preco;
+
+
+                if(Double.parseDouble(valorInformado) < preco){
+
+                    mostrarTroco.setText("Saldo inválido!");
+                }else{
+
+                    valorInformado = editValorInformado.getText().toString();
+                    troco = Double.parseDouble(valorInformado)-preco;
+                    mostrarTroco.setText("Troco final: "+troco);
+
+                }
             }
         });
     }
