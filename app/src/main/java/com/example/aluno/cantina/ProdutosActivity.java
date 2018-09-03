@@ -28,6 +28,7 @@ public class ProdutosActivity extends AppCompatActivity {
     private int qtdePirulito = 0;
     private int qtdeCapu = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,9 @@ public class ProdutosActivity extends AppCompatActivity {
 
          Button botaoPrecoFinal = (Button) findViewById(R.id.buttonPrecoFinal);
 
+        mostrarPreco = (TextView) findViewById(R.id.precoFinal);
+        mostrarTroco = (TextView) findViewById(R.id.textViewTroco);
+
          final EditText editValorInformado = (EditText) findViewById(R.id.editTextTroco);
 
 
@@ -60,6 +64,18 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdeSalg = qtdeSalg+1;
 
                 mostrarQtde.setText(""+qtdeSalg);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+
+                mostrarTroco.setText("Troco final: "+troco);
+
             }
         });
 
@@ -72,6 +88,17 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdeRefri = qtdeRefri+1;
 
                 mostrarQtde.setText(""+qtdeRefri);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+
+                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -84,6 +111,16 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdeBalas = qtdeBalas+1;
 
                 mostrarQtde.setText(""+qtdeBalas);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -96,6 +133,16 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdePirulito = qtdePirulito+1;
 
                 mostrarQtde.setText(""+qtdePirulito);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -108,6 +155,16 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdeCapu = qtdeCapu+1;
 
                 mostrarQtde.setText(""+qtdeCapu);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -120,6 +177,16 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdeSalg = qtdeSalg-1;
 
                 mostrarQtde.setText(""+qtdeSalg);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -132,6 +199,16 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdeRefri = qtdeRefri-1;
 
                 mostrarQtde.setText(""+qtdeRefri);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -144,6 +221,16 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdeBalas = qtdeBalas-1;
 
                 mostrarQtde.setText(""+qtdeBalas);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -156,6 +243,16 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdePirulito = qtdePirulito-1;
 
                 mostrarQtde.setText(""+qtdePirulito);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -168,6 +265,17 @@ public class ProdutosActivity extends AppCompatActivity {
                 qtdeCapu = qtdeCapu-1;
 
                 mostrarQtde.setText(""+qtdeCapu);
+
+                double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
+                        (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
+
+                mostrarPreco.setText("Preço final: "+preco);
+
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
+
+                troco = troco-preco;
+                mostrarTroco.setText("Troco final: "+troco);
+
             }
         });
 
@@ -175,26 +283,19 @@ public class ProdutosActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mostrarPreco = (TextView) findViewById(R.id.precoFinal);
-                mostrarTroco = (TextView) findViewById(R.id.textViewTroco);
-
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
                 mostrarPreco.setText("Preço final: "+preco);
 
-                String valorInformado = editValorInformado.getText().toString();
+                double troco = Double.parseDouble(editValorInformado.getText().toString());
 
-                double troco = Double.parseDouble(valorInformado)-preco;
-
-
-                if(Double.parseDouble(valorInformado) < preco){
+                if(troco < preco){
 
                     mostrarTroco.setText("Saldo inválido!");
                 }else{
 
-                    valorInformado = editValorInformado.getText().toString();
-                    troco = Double.parseDouble(valorInformado)-preco;
+                    troco = troco-preco;
                     mostrarTroco.setText("Troco final: "+troco);
 
                 }
