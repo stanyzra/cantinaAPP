@@ -10,6 +10,8 @@ import android.widget.EditText;
 
 import org.w3c.dom.Text;
 
+import java.text.DecimalFormat;
+
 public class ProdutosActivity extends AppCompatActivity {
 
     final double precoSalgado = 3.80;
@@ -27,6 +29,8 @@ public class ProdutosActivity extends AppCompatActivity {
     private int qtdeBalas = 0;
     private int qtdePirulito = 0;
     private int qtdeCapu = 0;
+
+    DecimalFormat df;
 
 
     @Override
@@ -53,6 +57,9 @@ public class ProdutosActivity extends AppCompatActivity {
 
          final EditText editValorInformado = (EditText) findViewById(R.id.editTextTroco);
 
+         df = new DecimalFormat("#0.00");
+
+
 
 
         botaoMaisSalgado.setOnClickListener(new View.OnClickListener() {
@@ -68,13 +75,8 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
-
-                troco = troco-preco;
-
-                mostrarTroco.setText("Troco final: "+troco);
 
             }
         });
@@ -92,13 +94,8 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
-
-                troco = troco-preco;
-
-                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -115,12 +112,9 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
 
-                troco = troco-preco;
-                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -137,12 +131,9 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
 
-                troco = troco-preco;
-                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -159,12 +150,9 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
 
-                troco = troco-preco;
-                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -181,12 +169,8 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
-
-                troco = troco-preco;
-                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -203,12 +187,9 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
 
-                troco = troco-preco;
-                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -225,12 +206,9 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
 
-                troco = troco-preco;
-                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -247,12 +225,9 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
 
-                troco = troco-preco;
-                mostrarTroco.setText("Troco final: "+troco);
             }
         });
 
@@ -269,12 +244,8 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
-                double troco = Double.parseDouble(editValorInformado.getText().toString());
-
-                troco = troco-preco;
-                mostrarTroco.setText("Troco final: "+troco);
 
             }
         });
@@ -286,7 +257,7 @@ public class ProdutosActivity extends AppCompatActivity {
                 double preco = (precoSalgado*qtdeSalg) + (precoRefri*qtdeRefri) + (precoBalas*qtdeBalas) +
                         (precoPirulito*qtdePirulito) + (precoCapu*qtdeCapu);
 
-                mostrarPreco.setText("Preço final: "+preco);
+                mostrarPreco.setText("Preço final: "+df.format(preco));
 
                 double troco = Double.parseDouble(editValorInformado.getText().toString());
 
@@ -296,7 +267,7 @@ public class ProdutosActivity extends AppCompatActivity {
                 }else{
 
                     troco = troco-preco;
-                    mostrarTroco.setText("Troco final: "+troco);
+                    mostrarTroco.setText("Troco final: "+df.format(troco));
 
                 }
             }
